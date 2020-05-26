@@ -1,0 +1,377 @@
+/*     @mixin  pc-little {
+        @media (max-width: 1199px) {
+            @content;
+        }
+    }
+    @mixin  pc-small {
+        @media (max-width: 1190px) {
+            @content;
+        }
+    }
+    @mixin  tabled{
+        @media (max-width: 991px) {
+            @content;
+        }
+    }
+    @mixin  mobile {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } */
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body, html, ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+section, header, footer, nav,
+form, input, div, dd {
+  margin: 0;
+  padding: 0;
+}
+
+li, ol {
+  list-style: none;
+}
+
+.flex_box {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+}
+
+body {
+  border-top: 7px solid #6CC6C4;
+  padding-top: 13px;
+  background: #F6F6F6;
+  color: #515151;
+  margin-bottom: 15px;
+}
+
+.gra-green {
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #9BE3E1, #6DC7C5);
+}
+
+header > div #main-img {
+  width: 300px;
+  display: inline-block;
+  padding: 38px 0 24px;
+}
+
+header > div #main-img a {
+  width: auto;
+}
+
+header > div #main-info {
+  float: right;
+  width: 217px;
+}
+
+header > div #main-info p:first-child {
+  font-size: 60%;
+}
+
+header > div #main-info h3 {
+  font-size: 160%;
+  font-weight: normal;
+  height: 52px;
+  line-height: 67px;
+}
+
+header > div #main-info h3 i {
+  font-size: 82%;
+  margin-right: 13px;
+}
+
+header > div #main-info p:last-child {
+  font-size: 62%;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0px;
+  padding: 7px 18px;
+}
+
+header > div #main-info p:last-child span {
+  color: red;
+}
+
+header #main-menu {
+  width: 100%;
+}
+
+header #main-menu > a {
+  display: inline;
+}
+
+header #main-menu > a :hover {
+  color: #ffffff7a;
+  background: linear-gradient(to top, #9BE3E1, #6DC7C5);
+}
+
+header #main-menu > a:first-of-type li {
+  border-radius: 5px 0 0 5px;
+}
+
+header #main-menu > a:last-of-type li {
+  border-radius: 0 5px 5px 0;
+}
+
+header #main-menu li {
+  position: relative;
+  border: 1px solid #6CC6C4;
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  height: 70px;
+  line-height: 55px;
+  font-size: 80%;
+  letter-spacing: .08em;
+}
+
+header #main-menu li:first-of-type::after {
+  content: 'HOME';
+  top: 26%;
+  position: absolute;
+  right: 40%;
+  display: inline-block;
+  height: 26px;
+  font-size: 73%;
+}
+
+header #main-menu li:nth-last-child(4)::after {
+  content: 'CLINIC';
+  position: absolute;
+  top: 26%;
+  position: absolute;
+  right: 38%;
+  display: inline-block;
+  height: 26px;
+  font-size: 73%;
+}
+
+header #main-menu li:nth-last-child(3)::after {
+  content: 'SERVICE';
+  position: absolute;
+  top: 26%;
+  position: absolute;
+  right: 35%;
+  display: inline-block;
+  height: 26px;
+  font-size: 73%;
+}
+
+header #main-menu li:nth-last-child(2)::after {
+  content: 'STAFF';
+  position: absolute;
+  top: 26%;
+  position: absolute;
+  right: 40%;
+  display: inline-block;
+  height: 26px;
+  font-size: 73%;
+}
+
+header #main-menu li:last-of-type::after {
+  content: 'ACCESS';
+  position: absolute;
+  top: 26%;
+  position: absolute;
+  right: 37%;
+  display: inline-block;
+  height: 26px;
+  font-size: 73%;
+}
+
+header #main-menu li:not(:last-of-type) {
+  border-right: none;
+}
+
+#all {
+  margin: 0 auto;
+  width: 910px;
+}
+
+#all #container {
+  display: flex;
+  padding-top: 21px;
+}
+
+#all #container #sidebar {
+  flex: .5;
+  padding-right: 13px;
+}
+
+#all #container #sidebar div {
+  background: white;
+  border: 1px solid #6CC6C4;
+  border-radius: 5px 5px 0 0;
+  padding-bottom: 20px;
+}
+
+#all #container #sidebar div dt {
+  height: 41px;
+  line-height: 45px;
+  font-weight: bold;
+  padding-left: 15px;
+  border-bottom: 1px solid #6CC6C4;
+}
+
+#all #container #sidebar div dd {
+  height: 41.3px;
+  line-height: 43px;
+  font-weight: bold;
+  margin: 0 12px;
+  font-size: 83%;
+  border-bottom: 1px solid #6CC6C4;
+}
+
+#all #container #sidebar div dd a {
+  display: block;
+  padding-left: 5px;
+}
+
+#all #container #sidebar div dd a::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #6CC6C4;
+  transform: rotate(45deg);
+  margin-right: 15px;
+}
+
+#all #container #sidebar div:first-child {
+  margin-bottom: 19px;
+}
+
+#all #container #sidebar div:first-child dd a:hover {
+  color: #6CC6C4;
+}
+
+#all #container #sidebar div:last-child dd a:hover {
+  color: yellowgreen;
+}
+
+#all #container #main {
+  flex: 1;
+}
+
+#all #container #main > div > div {
+  background: white;
+  padding: 20px 27px 43px;
+}
+
+#all #container #main > div > div h2 {
+  border-bottom: 4px solid #6CC6C4;
+  height: 50px;
+  line-height: 44px;
+}
+
+#all #container #main > div > div ul {
+  padding: 11.2px 10px 0;
+}
+
+#all #container #main > div > div ul li {
+  display: flex;
+  border-bottom: 2px dotted #ccc;
+  height: 60px;
+}
+
+#all #container #main > div > div ul li strong {
+  flex: 0.34;
+  font-size: 83%;
+  line-height: 50px;
+}
+
+#all #container #main > div > div ul li p {
+  flex: 1;
+  font-size: 82%;
+  padding-top: 12px;
+  transform: translateX(-2px);
+  letter-spacing: -.02em;
+}
+
+#all #container #main > div > div ul li:last-child {
+  height: 38px;
+}
+
+#all #container #main > div > div ul li:last-child strong {
+  height: 36px;
+  line-height: 42px;
+}
+
+#all #container #main > div > div ul li:last-child p {
+  padding-top: 8px;
+}
+
+#all footer {
+  margin-top: 21px;
+}
+
+#all footer > div > div:first-child ul {
+  height: 30px;
+  border-radius: 5px;
+  background: #6CC6C4;
+}
+
+#all footer > div > div:first-child ul li {
+  display: inline-block;
+  color: white;
+  font-size: 70%;
+  font-weight: bold;
+  padding: 7px 1px 0px 19px;
+  letter-spacing: .17em;
+}
+
+#all footer > div > div:first-child ul li a:hover {
+  text-decoration: underline;
+}
+
+#all footer > div > div:first-child ul li a::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 13px;
+}
+
+#all footer > div > div:first-child > div {
+  height: 48px;
+}
+
+#all footer > div > div:first-child > div > div {
+  float: right;
+  height: 50px;
+  line-height: 50px;
+}
+
+#all footer > div > div:first-child > div > div strong {
+  font-size: 80%;
+}
+
+#all footer > div > div:first-child > div > div p {
+  font-size: 81.4%;
+  display: inline-block;
+}
+
+#all footer > div > div:last-child {
+  border-top: 3px solid #6CC6C4;
+  text-align: center;
+  padding-top: 9px;
+}
+
+#all footer > div > div:last-child small {
+  font-size: 77%;
+}
+/*# sourceMappingURL=style.css.map */

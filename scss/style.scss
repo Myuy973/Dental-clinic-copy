@@ -72,7 +72,7 @@
 
     header  {
         > div {
-            #main-img {
+            .main-img {
                 width: 300px;
                 display: inline-block;
                 padding: 38px 0 24px;
@@ -80,7 +80,7 @@
                     width: auto;
                 }
             }
-            #main-info {
+            .main-info {
                 float: right;
                 width: 217px;
                 p:first-child {
@@ -90,7 +90,7 @@
                     font-size: 160%;
                     font-weight: normal;
                     height: 52px;
-                    line-height: 67px;
+                    padding-top: 12px;
                     i {
                         font-size: 82%;
                         margin-right: 13px;
@@ -111,27 +111,13 @@
             }
         }
 
-        #main-menu {
+        .main-menu {
             width: 100%;
-            > a {
-                display: inline;
-                :hover {
-                    color: #ffffff7a;
-                    background: -moz-linear-gradient(top, #9BE3E1, #6DC7C5); 
-                    background: -webkit-linear-gradient(top, #9BE3E1, #6DC7C5); 
-                    background: linear-gradient(to top, #9BE3E1, #6DC7C5);             
-                }
-                &:first-of-type li {
-                    border-radius: 5px 0 0 5px;
-                }
-                &:last-of-type li {
-                    border-radius: 0 5px 5px 0;
-                }
-            }
             li {
                 position: relative;
                 &:first-of-type {
-                    &::after {
+                    border-radius: 5px 0 0 5px;
+                    & a::after {
                         content: 'HOME';
                         top: 26%;
                         position: absolute;
@@ -141,7 +127,7 @@
                         font-size: 73%;
                     }
                 }
-                &:nth-last-child(4)::after {
+                &:nth-last-child(4) a::after {
                     content: 'CLINIC';
                     position: absolute;
                     top: 26%;
@@ -152,7 +138,7 @@
                     font-size: 73%;
 
                 }
-                &:nth-last-child(3)::after {
+                &:nth-last-child(3) a::after {
                     content: 'SERVICE';
                     position: absolute;
                     top: 26%;
@@ -162,7 +148,7 @@
                     height: 26px;
                     font-size: 73%;
                 }
-                &:nth-last-child(2)::after {
+                &:nth-last-child(2) a::after {
                     content: 'STAFF';
                     position: absolute;
                     top: 26%;
@@ -174,7 +160,8 @@
                     
                 }
                 &:last-of-type {
-                    &::after {
+                    border-radius: 0 5px 5px 0;
+                    & a::after {
                         content: 'ACCESS';
                         position: absolute;
                         top: 26%;
@@ -188,6 +175,13 @@
                 &:not(:last-of-type) {
                     border-right: none;
                 }
+                &:hover {
+                    color: #ffffff7a;
+                    background: -moz-linear-gradient(top, #9BE3E1, #6DC7C5); 
+                    background: -webkit-linear-gradient(top, #9BE3E1, #6DC7C5); 
+                    background: linear-gradient(to top, #9BE3E1, #6DC7C5);             
+                }
+
                 border: 1px solid #6CC6C4;
                 display: inline-block;
                 width: 20%;
@@ -196,18 +190,24 @@
                 line-height: 55px;
                 font-size: 80%;
                 letter-spacing: .08em;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+    
             }
         }
     }
 
 
-    #all {
+    .wrap {
         margin: 0 auto;
         width: 910px;
-        #container {
+        .container {
             display: flex;
             padding-top: 21px;
-            #sidebar {
+            .sidebar {
                 flex: .5;
                 padding-right: 13px;
                 div {
@@ -247,7 +247,7 @@
 
                     }
                 }
-                div:first-child {
+                .side-general {
                     margin-bottom: 19px;
                     dd {
                         a:hover {
@@ -255,15 +255,15 @@
                         }
                     }
                 }
-                div:last-child dd a:hover {
+                .side-beauty dd a:hover {
                     color: yellowgreen;
                 }
             }
 
-            #main {
+            .main {
                 flex: 1;
-                > div {
-                    > div {
+                .main-cover {
+                    .info {
                         background: white;
                         padding: 20px 27px 43px;
                         h2 {
@@ -277,7 +277,7 @@
                                 display: flex;
                                 border-bottom: 2px dotted #ccc;
                                 height: 60px;
-                                strong {
+                                h3 {
                                     flex: 0.34;
                                     font-size: 83%;
                                     line-height: 50px;
@@ -292,7 +292,7 @@
 
                                 &:last-child {
                                     height: 38px;
-                                    strong {
+                                    h3 {
                                         height: 36px;
                                         line-height: 42px;
                                     }
@@ -311,8 +311,8 @@
 
         footer {
             margin-top: 21px;
-            >div {
-                > div:first-child {
+            .footer-cover {
+                .footer-menu {
                     ul {
                         height: 30px;
                         border-radius: 5px;
@@ -342,9 +342,9 @@
 
                         }
                     }
-                    > div {
+                    .accesse {
                         height: 48px;
-                        > div {
+                        .access-main {
                             float: right;
                             height: 50px;
                             line-height: 50px;
@@ -358,7 +358,7 @@
                         }
                     }
                 }
-                > div:last-child {
+                .footer-bottom {
                     border-top: 3px solid #6CC6C4;
                     text-align: center;
                     padding-top: 9px;

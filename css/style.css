@@ -60,38 +60,38 @@ body {
   background: linear-gradient(to bottom, #9BE3E1, #6DC7C5);
 }
 
-header > div #main-img {
+header > div .main-img {
   width: 300px;
   display: inline-block;
   padding: 38px 0 24px;
 }
 
-header > div #main-img a {
+header > div .main-img a {
   width: auto;
 }
 
-header > div #main-info {
+header > div .main-info {
   float: right;
   width: 217px;
 }
 
-header > div #main-info p:first-child {
+header > div .main-info p:first-child {
   font-size: 60%;
 }
 
-header > div #main-info h3 {
+header > div .main-info h3 {
   font-size: 160%;
   font-weight: normal;
   height: 52px;
-  line-height: 67px;
+  padding-top: 12px;
 }
 
-header > div #main-info h3 i {
+header > div .main-info h3 i {
   font-size: 82%;
   margin-right: 13px;
 }
 
-header > div #main-info p:last-child {
+header > div .main-info p:last-child {
   font-size: 62%;
   display: inline-block;
   width: 100%;
@@ -100,32 +100,15 @@ header > div #main-info p:last-child {
   padding: 7px 18px;
 }
 
-header > div #main-info p:last-child span {
+header > div .main-info p:last-child span {
   color: red;
 }
 
-header #main-menu {
+header .main-menu {
   width: 100%;
 }
 
-header #main-menu > a {
-  display: inline;
-}
-
-header #main-menu > a :hover {
-  color: #ffffff7a;
-  background: linear-gradient(to top, #9BE3E1, #6DC7C5);
-}
-
-header #main-menu > a:first-of-type li {
-  border-radius: 5px 0 0 5px;
-}
-
-header #main-menu > a:last-of-type li {
-  border-radius: 0 5px 5px 0;
-}
-
-header #main-menu li {
+header .main-menu li {
   position: relative;
   border: 1px solid #6CC6C4;
   display: inline-block;
@@ -137,7 +120,11 @@ header #main-menu li {
   letter-spacing: .08em;
 }
 
-header #main-menu li:first-of-type::after {
+header .main-menu li:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+
+header .main-menu li:first-of-type a::after {
   content: 'HOME';
   top: 26%;
   position: absolute;
@@ -147,7 +134,7 @@ header #main-menu li:first-of-type::after {
   font-size: 73%;
 }
 
-header #main-menu li:nth-last-child(4)::after {
+header .main-menu li:nth-last-child(4) a::after {
   content: 'CLINIC';
   position: absolute;
   top: 26%;
@@ -158,7 +145,7 @@ header #main-menu li:nth-last-child(4)::after {
   font-size: 73%;
 }
 
-header #main-menu li:nth-last-child(3)::after {
+header .main-menu li:nth-last-child(3) a::after {
   content: 'SERVICE';
   position: absolute;
   top: 26%;
@@ -169,7 +156,7 @@ header #main-menu li:nth-last-child(3)::after {
   font-size: 73%;
 }
 
-header #main-menu li:nth-last-child(2)::after {
+header .main-menu li:nth-last-child(2) a::after {
   content: 'STAFF';
   position: absolute;
   top: 26%;
@@ -180,7 +167,11 @@ header #main-menu li:nth-last-child(2)::after {
   font-size: 73%;
 }
 
-header #main-menu li:last-of-type::after {
+header .main-menu li:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
+
+header .main-menu li:last-of-type a::after {
   content: 'ACCESS';
   position: absolute;
   top: 26%;
@@ -191,33 +182,44 @@ header #main-menu li:last-of-type::after {
   font-size: 73%;
 }
 
-header #main-menu li:not(:last-of-type) {
+header .main-menu li:not(:last-of-type) {
   border-right: none;
 }
 
-#all {
+header .main-menu li:hover {
+  color: #ffffff7a;
+  background: linear-gradient(to top, #9BE3E1, #6DC7C5);
+}
+
+header .main-menu li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
   margin: 0 auto;
   width: 910px;
 }
 
-#all #container {
+.wrap .container {
   display: flex;
   padding-top: 21px;
 }
 
-#all #container #sidebar {
+.wrap .container .sidebar {
   flex: .5;
   padding-right: 13px;
 }
 
-#all #container #sidebar div {
+.wrap .container .sidebar div {
   background: white;
   border: 1px solid #6CC6C4;
   border-radius: 5px 5px 0 0;
   padding-bottom: 20px;
 }
 
-#all #container #sidebar div dt {
+.wrap .container .sidebar div dt {
   height: 41px;
   line-height: 45px;
   font-weight: bold;
@@ -225,7 +227,7 @@ header #main-menu li:not(:last-of-type) {
   border-bottom: 1px solid #6CC6C4;
 }
 
-#all #container #sidebar div dd {
+.wrap .container .sidebar div dd {
   height: 41.3px;
   line-height: 43px;
   font-weight: bold;
@@ -234,12 +236,12 @@ header #main-menu li:not(:last-of-type) {
   border-bottom: 1px solid #6CC6C4;
 }
 
-#all #container #sidebar div dd a {
+.wrap .container .sidebar div dd a {
   display: block;
   padding-left: 5px;
 }
 
-#all #container #sidebar div dd a::before {
+.wrap .container .sidebar div dd a::before {
   content: '';
   display: inline-block;
   width: 7px;
@@ -249,50 +251,50 @@ header #main-menu li:not(:last-of-type) {
   margin-right: 15px;
 }
 
-#all #container #sidebar div:first-child {
+.wrap .container .sidebar .side-general {
   margin-bottom: 19px;
 }
 
-#all #container #sidebar div:first-child dd a:hover {
+.wrap .container .sidebar .side-general dd a:hover {
   color: #6CC6C4;
 }
 
-#all #container #sidebar div:last-child dd a:hover {
+.wrap .container .sidebar .side-beauty dd a:hover {
   color: yellowgreen;
 }
 
-#all #container #main {
+.wrap .container .main {
   flex: 1;
 }
 
-#all #container #main > div > div {
+.wrap .container .main .main-cover .info {
   background: white;
   padding: 20px 27px 43px;
 }
 
-#all #container #main > div > div h2 {
+.wrap .container .main .main-cover .info h2 {
   border-bottom: 4px solid #6CC6C4;
   height: 50px;
   line-height: 44px;
 }
 
-#all #container #main > div > div ul {
+.wrap .container .main .main-cover .info ul {
   padding: 11.2px 10px 0;
 }
 
-#all #container #main > div > div ul li {
+.wrap .container .main .main-cover .info ul li {
   display: flex;
   border-bottom: 2px dotted #ccc;
   height: 60px;
 }
 
-#all #container #main > div > div ul li strong {
+.wrap .container .main .main-cover .info ul li h3 {
   flex: 0.34;
   font-size: 83%;
   line-height: 50px;
 }
 
-#all #container #main > div > div ul li p {
+.wrap .container .main .main-cover .info ul li p {
   flex: 1;
   font-size: 82%;
   padding-top: 12px;
@@ -300,30 +302,30 @@ header #main-menu li:not(:last-of-type) {
   letter-spacing: -.02em;
 }
 
-#all #container #main > div > div ul li:last-child {
+.wrap .container .main .main-cover .info ul li:last-child {
   height: 38px;
 }
 
-#all #container #main > div > div ul li:last-child strong {
+.wrap .container .main .main-cover .info ul li:last-child h3 {
   height: 36px;
   line-height: 42px;
 }
 
-#all #container #main > div > div ul li:last-child p {
+.wrap .container .main .main-cover .info ul li:last-child p {
   padding-top: 8px;
 }
 
-#all footer {
+.wrap footer {
   margin-top: 21px;
 }
 
-#all footer > div > div:first-child ul {
+.wrap footer .footer-cover .footer-menu ul {
   height: 30px;
   border-radius: 5px;
   background: #6CC6C4;
 }
 
-#all footer > div > div:first-child ul li {
+.wrap footer .footer-cover .footer-menu ul li {
   display: inline-block;
   color: white;
   font-size: 70%;
@@ -332,11 +334,11 @@ header #main-menu li:not(:last-of-type) {
   letter-spacing: .17em;
 }
 
-#all footer > div > div:first-child ul li a:hover {
+.wrap footer .footer-cover .footer-menu ul li a:hover {
   text-decoration: underline;
 }
 
-#all footer > div > div:first-child ul li a::before {
+.wrap footer .footer-cover .footer-menu ul li a::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -346,32 +348,32 @@ header #main-menu li:not(:last-of-type) {
   margin-right: 13px;
 }
 
-#all footer > div > div:first-child > div {
+.wrap footer .footer-cover .footer-menu .accesse {
   height: 48px;
 }
 
-#all footer > div > div:first-child > div > div {
+.wrap footer .footer-cover .footer-menu .accesse .access-main {
   float: right;
   height: 50px;
   line-height: 50px;
 }
 
-#all footer > div > div:first-child > div > div strong {
+.wrap footer .footer-cover .footer-menu .accesse .access-main strong {
   font-size: 80%;
 }
 
-#all footer > div > div:first-child > div > div p {
+.wrap footer .footer-cover .footer-menu .accesse .access-main p {
   font-size: 81.4%;
   display: inline-block;
 }
 
-#all footer > div > div:last-child {
+.wrap footer .footer-cover .footer-bottom {
   border-top: 3px solid #6CC6C4;
   text-align: center;
   padding-top: 9px;
 }
 
-#all footer > div > div:last-child small {
+.wrap footer .footer-cover .footer-bottom small {
   font-size: 77%;
 }
 /*# sourceMappingURL=style.css.map */

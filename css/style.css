@@ -72,7 +72,7 @@ header > div .main-img a {
 
 header > div .main-info {
   float: right;
-  width: 217px;
+  width: auto;
 }
 
 header > div .main-info p:first-child {
